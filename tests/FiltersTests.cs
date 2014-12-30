@@ -25,10 +25,6 @@ namespace Java2csharp.Tests
             usings.Add("using System;");
             usings.Add("using System.Collections.Generic;");
 
-            // Add default usings for ikvm
-            usings.Add("using java.lang;");
-            usings.Add("using Object = java.lang.Object;");
-
             var addUsings = new AddUsings();
 
             string java = ReadSample("Sample2.java");

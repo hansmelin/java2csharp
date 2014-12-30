@@ -1,3 +1,3 @@
-﻿public class Sample1 {
+﻿public class Sample2 {
 
 }
