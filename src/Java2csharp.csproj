@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Filters\AddDefaultUsings.cs" />
+    <Compile Include="Filters\AddUsings.cs" />
     <Compile Include="Filters\ImportsToUsings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

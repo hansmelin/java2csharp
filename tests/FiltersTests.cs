@@ -18,21 +18,21 @@ namespace Java2csharp.Tests
         }
 
         [Fact]
-        public void ShouldAddDefaultUsings()
+        public void ShouldAddUsings()
         {
-            IList<string> defaultUsings = new List<string>();
-            // Append default usings for .net
-            defaultUsings.Add("using System;");
-            defaultUsings.Add("using System.Collections.Generic;");
+            IList<string> usings = new List<string>();
+            // Add default usings for .net
+            usings.Add("using System;");
+            usings.Add("using System.Collections.Generic;");
 
-            // Append default usings for ikvm
-            defaultUsings.Add("using java.lang;");
-            defaultUsings.Add("using Object = java.lang.Object;");
+            // Add default usings for ikvm
+            usings.Add("using java.lang;");
+            usings.Add("using Object = java.lang.Object;");
 
-            var addDefaultUsings = new AddDefaultUsings();
+            var addUsings = new AddUsings();
 
             string java = ReadSample("Sample2.java");
-            string csharp = addDefaultUsings.Apply(java, defaultUsings);
+            string csharp = addUsings.Apply(java, usings);
             Assert.Equal(ReadSample("Sample2.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
