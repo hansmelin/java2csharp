@@ -1,21 +1,33 @@
-﻿using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace Java2csharp.Filters
 {
     /// <summary>
-    /// Add usings to a class that does not exist in the java file, e.g. using System;
+    ///     Add usings to a class that does not exist in the java file, e.g. using System.Text;
     /// </summary>
-    public class AddUsings
+    public class AddUsings : IFilter
     {
-        public string Apply(string code, IList<string> usings)
-        {            
+        private readonly string[] namespaces;
+
+        public AddUsings(params string[] namespaces)
+        {
+            this.namespaces = namespaces;
+        }
+
+        public string Apply(string code)
+        {
+            if (namespaces == null || namespaces.Length == 0)
+            {
+                return code;
+            }
+
             // Put the usings first in file
             var result = new StringBuilder();
-            foreach (string @using in usings)
+            foreach (string @namespace in namespaces)
             {
-                result.Append(@using);
-                result.AppendLine();
+                result.Append("using ");
+                result.Append(@namespace);
+                result.AppendLine(";");
             }
 
             result.AppendLine();

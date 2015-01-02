@@ -9,7 +9,7 @@ namespace Java2csharp.Filters
     ///     Converts the target to e.g. using java.lang.annotation and moves it to the beginning of the file
     /// </summary>
     /// <returns></returns>
-    public class ImportsToUsings
+    public class ImportsToUsings : IFilter
     {
         public string Apply(string code)
         {

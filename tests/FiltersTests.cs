@@ -20,15 +20,10 @@ namespace Java2csharp.Tests
         [Fact]
         public void ShouldAddUsings()
         {
-            IList<string> usings = new List<string>();
-            // Add default usings for .net
-            usings.Add("using System;");
-            usings.Add("using System.Collections.Generic;");
-
-            var addUsings = new AddUsings();
+            var addUsings = new AddUsings("System", "System.Collections.Generic");
 
             string java = ReadSample("Sample2.java");
-            string csharp = addUsings.Apply(java, usings);
+            string csharp = addUsings.Apply(java);
             Assert.Equal(ReadSample("Sample2.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 

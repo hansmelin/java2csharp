@@ -2,7 +2,11 @@
 
 namespace Java2csharp.Filters
 {
-    public class RemoveCheckedExceptions
+    /// <summary>
+    /// TODO: Add exception tags as an option instead of just removing them
+    /// http://msdn.microsoft.com/en-us/library/w1htk11d.aspx
+    /// </summary>
+    public class RemoveCheckedExceptions : IFilter
     {
         public string Apply(string code)
         {

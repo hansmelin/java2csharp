@@ -8,7 +8,7 @@ namespace Java2csharp.Filters
     ///     Converts the target to namespace java.util {
     ///     It also adds a closing bracket } to the end of the file
     /// </summary>
-    public class PackageToNamespace
+    public class PackageToNamespace : IFilter
     {
         public string Apply(string code)
         {
