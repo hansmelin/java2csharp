@@ -47,7 +47,7 @@ namespace Java2csharp.Filters
             }
 
             // Remove all imports           
-            string textWithNoImports = Regex.Replace(code, @"import.+\n", string.Empty);
+            string codeWithNoImports = Regex.Replace(code, @"import.+\n", string.Empty);
 
             // Put the converted usings first in file
             var result = new StringBuilder();
@@ -59,7 +59,7 @@ namespace Java2csharp.Filters
             result.AppendLine();
 
             // Add the rest of the code after the new usings
-            result.Append(textWithNoImports);
+            result.Append(codeWithNoImports);
 
             return result.ToString();
         }
