@@ -32,6 +32,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample2.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldConvertPackageToNamespace()
+        {
+            var packageToNamespace = new PackageToNamespace();
+
+            string java = ReadSample("Sample3.java");
+            string csharp = packageToNamespace.Apply(java);
+            Assert.Equal(ReadSample("Sample3.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);

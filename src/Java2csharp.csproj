@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Filters\AddUsings.cs" />
     <Compile Include="Filters\ImportsToUsings.cs" />
+    <Compile Include="Filters\PackageToNamespace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
