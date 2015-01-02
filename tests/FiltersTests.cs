@@ -42,6 +42,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample3.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldRemoveCheckedExceptions()
+        {
+            var removeCheckedExceptions = new RemoveCheckedExceptions();
+
+            string java = ReadSample("Sample4.java");
+            string csharp = removeCheckedExceptions.Apply(java);
+            Assert.Equal(ReadSample("Sample4.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);
