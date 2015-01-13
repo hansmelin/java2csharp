@@ -43,6 +43,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Samples\Sample5.csharp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Samples\Sample5.java">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Samples\Sample4.java">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -79,6 +85,9 @@
       <Project>{2699926C-C640-4A32-B560-CA4B14DCFD99}</Project>
       <Name>Java2csharp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

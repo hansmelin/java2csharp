@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Filters\ExtendsAndImplementsToColon.cs" />
     <Compile Include="Filters\AddUsings.cs" />
     <Compile Include="Filters\ImportsToUsings.cs" />
     <Compile Include="Filters\PackageToNamespace.cs" />

@@ -1,0 +1,14 @@
+﻿public class Sample5 : BaseClass {
+}
+          
+public class Sample5 : Interface {
+}
+          
+public class Sample5 : BaseClass, Interface {
+}
+          
+public class Sample5 : BaseClass, BaseClass2, Interface {
+}
+          
+public class Sample5 : BaseClass, BaseClass2, Interface, Interface2 {
+}

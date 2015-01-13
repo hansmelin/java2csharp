@@ -47,6 +47,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample4.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldConvertExtendsAndImplementsToColon()
+        {
+            var extendsAndImplementsToColon = new ExtendsAndImplementsToColon();
+
+            string java = ReadSample("Sample5.java");
+            string csharp = extendsAndImplementsToColon.Apply(java);
+            Assert.Equal(ReadSample("Sample5.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);
