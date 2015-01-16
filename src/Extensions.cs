@@ -15,5 +15,18 @@ namespace Java2csharp
             var regex = new Regex(@"([\s(])" + oldKeyword + @"([\s\[])", RegexOptions.Multiline);
             return regex.Replace(code, "$1" + newKeyword + "$2");
         }
+
+        /// <summary>
+        /// Convert class names
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="oldKeyword"></param>
+        /// <param name="newKeyword"></param>
+        /// <returns></returns>
+        public static string ConvertClassName(this string code, string oldKeyword, string newKeyword)
+        {
+            var regex = new Regex(@"([\s<,(])" + oldKeyword + @"([,\s\[\)\(\.<>])", RegexOptions.Multiline);
+            return regex.Replace(code, "$1" + newKeyword + "$2");
+        }
     }
 }

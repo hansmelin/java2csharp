@@ -1,0 +1,8 @@
+﻿public class Sample8 {
+	private bool isItReallyTrue;
+	private string myPonyIsOverTheOcean;
+	private Map<string, string> aMap;
+	
+	private void Foo(string parameter){
+	}
+}

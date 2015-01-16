@@ -76,6 +76,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample7.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldConvertPrimitiveTypes()
+        {
+            var primitiveTypes = new PrimitiveTypes();
+
+            string java = ReadSample("Sample8.java");
+            string csharp = primitiveTypes.Apply(java);
+            Assert.Equal(ReadSample("Sample8.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);
