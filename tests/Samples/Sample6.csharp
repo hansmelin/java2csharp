@@ -1,0 +1,3 @@
+﻿public class Sample6 {
+	private readonly int id;
+}

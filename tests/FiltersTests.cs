@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using Java2csharp.Filters;
 using Xunit;
 
@@ -12,7 +11,7 @@ namespace Java2csharp.Tests
         {
             var importsToUsings = new ImportsToUsings();
 
-            string java = ReadSample("Sample1.java");            
+            string java = ReadSample("Sample1.java");
             string csharp = importsToUsings.Apply(java);
             Assert.Equal(ReadSample("Sample1.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
@@ -55,6 +54,16 @@ namespace Java2csharp.Tests
             string java = ReadSample("Sample5.java");
             string csharp = extendsAndImplementsToColon.Apply(java);
             Assert.Equal(ReadSample("Sample5.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
+        [Fact]
+        public void ShouldConvertFinalToReadOnly()
+        {
+            var finalToReadOnly = new FinalToReadOnly();
+
+            string java = ReadSample("Sample6.java");
+            string csharp = finalToReadOnly.Apply(java);
+            Assert.Equal(ReadSample("Sample6.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
         private string ReadSample(string sample)

@@ -43,9 +43,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Samples\Sample6.csharp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Samples\Sample5.csharp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="Samples\Sample6.java">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Samples\Sample5.java">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

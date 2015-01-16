@@ -45,6 +45,7 @@
     <Compile Include="Filters\ImportsToUsings.cs" />
     <Compile Include="Filters\PackageToNamespace.cs" />
     <Compile Include="Filters\RemoveCheckedExceptions.cs" />
+    <Compile Include="Filters\FinalToReadOnly.cs" />
     <Compile Include="IFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
