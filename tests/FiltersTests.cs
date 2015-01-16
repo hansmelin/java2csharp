@@ -66,6 +66,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample6.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldConvertSimpleAnnotationToAttribute()
+        {
+            var simpleAnnotationToAttribute = new SimpleAnnotationToAttribute();
+
+            string java = ReadSample("Sample7.java");
+            string csharp = simpleAnnotationToAttribute.Apply(java);
+            Assert.Equal(ReadSample("Sample7.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);
