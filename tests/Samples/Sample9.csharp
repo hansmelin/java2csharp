@@ -1,0 +1,17 @@
+﻿public class Sample9 {	
+    private void Foo(){
+          	"".Trim();
+            "".ToLower();
+            "".ToUpper();
+            "".Length";
+            "".Substring(8);
+            "".Replace("","");
+            "".Equals("");
+            "".Add("");
+            "".Contains("");
+            "".StartsWith("");
+            "".Append("");
+            "".ToString();
+            ""[8];
+    }
+}

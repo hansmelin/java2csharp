@@ -86,6 +86,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample8.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldConvertCommonMethods()
+        {
+            var commonMethods = new CommonMethods();
+
+            string java = ReadSample("Sample9.java");
+            string csharp = commonMethods.Apply(java);
+            Assert.Equal(ReadSample("Sample9.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);
