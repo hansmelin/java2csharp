@@ -1,0 +1,7 @@
+﻿public class Sample10 {	
+    private void Foo(){
+		foreach (Map.Entry<string, string> entry in diff.entrySet()) {
+
+		}
+    }
+}

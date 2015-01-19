@@ -96,6 +96,16 @@ namespace Java2csharp.Tests
             Assert.Equal(ReadSample("Sample9.csharp"), csharp, new StringCompIgnoreWhiteSpace());
         }
 
+        [Fact]
+        public void ShouldConvertForeachLoop()
+        {
+            var forEachLoop = new ForEachLoop();
+
+            string java = ReadSample("Sample10.java");
+            string csharp = forEachLoop.Apply(java);
+            Assert.Equal(ReadSample("Sample10.csharp"), csharp, new StringCompIgnoreWhiteSpace());
+        }
+
         private string ReadSample(string sample)
         {
             return File.ReadAllText(@"Samples\" + sample);

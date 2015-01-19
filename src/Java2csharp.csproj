@@ -47,6 +47,7 @@
     <Compile Include="Filters\PackageToNamespace.cs" />
     <Compile Include="Filters\RemoveCheckedExceptions.cs" />
     <Compile Include="Filters\FinalToReadOnly.cs" />
+    <Compile Include="Filters\ForEachLoop.cs" />
     <Compile Include="IFilter.cs" />
     <Compile Include="Filters\PrimitiveTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
